@@ -1,0 +1,195 @@
+{
+    "title": "Profile",
+    "alias": "profile",
+    "plural": "Profiles",
+    "singular": "Profile",
+    "description": "Listing Profile.",
+    "position": "1",
+    "has_view": "1",
+    "fields": [
+        {
+            "nullable": "0",
+            "name": "name",
+            "title": "Name",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "description",
+            "title": "About Us",
+            "input": "editor",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "mission",
+            "title": "Mission",
+            "input": "textarea",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "vision",
+            "title": "Vision",
+            "input": "textarea",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "physical_location",
+            "title": "Physical Location",
+            "input": "textarea",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "address",
+            "title": "Address",
+            "input": "textarea",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "email",
+            "title": "Email",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "phone",
+            "title": "Phone",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "map",
+            "title": "Map",
+            "input": "map",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "images",
+            "title": "Images",
+            "input": "gallery",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        }
+    ],
+
+    "groups": [
+        {
+            "title": "Profile Detail",
+            "alias": "profile_detail",
+            "show_title": 1,
+            "fields": [
+                "name",
+                "description"
+            ]
+        },
+        {
+            "title": "Our Believes",
+            "alias": "our_believes",
+            "show_title": 1,
+            "fields": [
+                "mission",
+                "vision"
+            ]
+        },
+        {
+            "title": "Maps",
+            "alias": "maps",
+            "show_title": 1,
+            "fields": [
+                "map"
+            ]
+        },
+        {
+            "title": "Images",
+            "alias": "images",
+            "show_title": 1,
+            "fields": [
+                "images"
+            ]
+        },
+        {
+            "title": "Location",
+            "alias": "location",
+            "show_title": 1,
+            "fields": [
+                "physical_location"
+            ]
+        },
+        {
+            "title": "Contact",
+            "alias": "contact",
+            "show_title": 1,
+            "fields": [
+                "address",
+                "email",
+                "phone"
+            ]
+        }
+    ],
+
+    "zones": {
+        "left": {
+            "groups": ["profile_detail", "our_believes", "map", "images"]
+        },
+        "right": {
+            "groups": ["contact","location"]
+        }
+    }
+}

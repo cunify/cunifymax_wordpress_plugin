@@ -1,0 +1,6 @@
+{
+    "require": {
+        "timber/timber": "^1.7",
+        "mikehaertl/phpwkhtmltopdf": "^2.3"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "sections": [
+        {
+            "title": "Testimonial",
+            "name": "testimonial_section",
+            "description": "Provide information on 'Testimonial'",
+            "fields":
+                    [
+                        {
+                            "name": "cunifymax_testimonial_title",
+                            "title": "Title",
+                            "input": "text",
+                            "default": "Testimonial"
+                        }, {
+                            "name": "cunifymax_testimonial_description",
+                            "title": "Description",
+                            "input": "textarea",  
+                            "default": "Listing of Testimonial added to this site."  
+                        }
+                    ]    
+        }
+    ]
+}
+
+

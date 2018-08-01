@@ -1,0 +1,145 @@
+{
+    "title": "Team",
+    "alias": "team",
+    "plural": "Teams",
+    "singular": "Team",
+    "description": "Listing Team.",
+    "position": "4",
+    "has_view": "1",
+    "fields": [
+        {
+            "nullable": "0",
+            "name": "name",
+            "title": "Name",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "description",
+            "title": "Description",
+            "input": "editor",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "image",
+            "title": "Image",
+            "input": "upload",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "position",
+            "title": "Position",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "facebook",
+            "title": "Facebook",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "twitter",
+            "title": "Twitter",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        }, {
+            "nullable": "1",
+            "name": "google_plus",
+            "title": "Google Plus",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        }, {
+            "nullable": "1",
+            "name": "linkedin",
+            "title": "Linkedin",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        }
+    ],
+
+    "groups": [
+        {
+            "title": "Team Detail",
+            "alias": "team_detail",
+            "show_title": 1,
+            "fields": [
+                "name",
+                "description"
+            ]
+        },
+        {
+            "title": "Position",
+            "alias": "position",
+            "show_title": 1,
+            "fields": [
+                "position"
+            ]
+        },
+        {
+            "title": "Team",
+            "alias": "team",
+            "show_title": 1,
+            "fields": [
+                "facebook",
+                "twitter",
+                "linkedin",
+                "google_plus"
+            ]
+        }
+    ],
+
+    "zones": {
+        "left": {
+            "groups": ["team_detail"]
+        },
+        "right": {
+            "groups": ["team", "position"]
+        }
+    }
+}

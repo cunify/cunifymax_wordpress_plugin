@@ -1,0 +1,63 @@
+{
+    "title": "Social",
+    "alias": "social",
+    "plural": "Socials",
+    "singular": "Social",
+    "description": "Listing Social Links ",
+    "position": "1",
+    "has_view": "1",
+    "fields": [
+        {
+            "nullable": "0",
+            "name": "title",
+            "title": "Title",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "icon",
+            "title": "Icon",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "0",
+            "name": "link",
+            "title": "Link",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        }
+    ],
+    "groups": [
+        {
+            "title": "Social  Detail",
+            "alias": "social_detail",
+            "show_title": 1,
+            "fields": [
+                "title",
+                "link"
+            ]
+        }
+    ],
+    "zones": {
+        "left": {
+            "groups": ["social_detail"]
+        }
+    }
+}

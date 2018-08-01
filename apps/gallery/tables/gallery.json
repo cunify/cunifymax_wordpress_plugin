@@ -1,0 +1,51 @@
+{
+    "title": "Gallery",
+    "alias": "gallery",
+    "plural": "Gallery",
+    "singular": "Gallery",
+    "description": "Listing Gallery",
+    "position": "1",
+    "has_view": "1",
+    "fields": [
+        {
+            "nullable": "0",
+            "name": "title",
+            "title": "Title",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "0",
+            "name": "images",
+            "title": "Imaages",
+            "input": "upload",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        }
+    ],
+    "groups": [
+        {
+            "title": "Gallery Detail",
+            "alias": "gallery_detail",
+            "show_title": 1,
+            "fields": [
+                "title",
+                "images"
+            ]
+        }
+    ],
+    "zones": {
+        "left": {
+            "groups": ["gallery_detail"]
+        }
+    }
+}

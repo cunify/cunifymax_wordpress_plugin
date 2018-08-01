@@ -1,0 +1,42 @@
+<style id="cx_design_style">
+    {% set measurables = ["cx", "font-size", "line-height", "height", "height", "width", "max-height", "min-height", "max-width", "min-width", "margin", "padding", 'top', 'bottom', 'left', "right", "border", "border-radius", "border-size", 'border-top-size', 'border-bottom-size', 'border-left-size', "border-right-size"] %}
+    {% for key,json in design.custom.json_arr  %}
+        {% set css_str = '' %}
+        {% set has_overlay = false %}
+        {% set overlay_str = key ~ ':before{content: "";position: absolute;left: 0;right: 0;top: 0;bottom: 0;z-index: 5;' %}
+        {% set css_str = css_str ~ key ~ '{'%}
+        {% for key_val,css in json  %}  
+            {% if key_val == 'background-overlay-opacity' %}
+                {% set opacity = 1 * css / 100 %}
+                {% set has_overlay  = true %}
+                {% set overlay_str = overlay_str ~ 'background: sdfsdf ' ~ attribute(json, 'background-overlay-color') ~ ';opacity: ' ~ opacity ~ ';' %}
+            {% elseif key_val == 'background-overlay-color' %}
+            {% endif %}
+            {% if 'measure' in key_val %}
+                {% set css_str = css_str  ~ ''%}
+            {%  else %}
+                {% if (key_val in measurables) %}
+                    {% set measurement = 'px' %}
+                    {% if tmp_key ~ '-measure' in json|keys %}
+                        {% set measurement = attribute(json, key_val ~ '-measure')%}
+                    {% endif %}
+                    {% set css_str = css_str  ~ key_val ~ ':' ~ css ~ measurement ~ ";" %}
+                {% else %}
+                    {% set css_str = css_str  ~ key_val ~ ':' ~ css ~ ";"%}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+{{ css_str ~ '}' }}
+        {% set overlay_str =  overlay_str ~ '}' %}
+        {% set overlay_str =  key ~ ' > * {position:relative; z-index:8;}' %}
+        {% if has_overlay %}
+{{ overlay_str }}
+        {% endif %}
+    {% endfor %}
+
+</style>
+<style id="cx_design_userdefined_style">
+    /* xxxxxxxxx CSS xxxxxxxxxx */
+    {{ design.custom.css }}
+
+</style>

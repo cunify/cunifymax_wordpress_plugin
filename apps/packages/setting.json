@@ -1,0 +1,25 @@
+{
+    "sections": [
+        {
+            "title": "Plan",
+            "name": "Plan_section",
+            "description": "Provide information on 'Plan'",
+            "fields":
+                    [
+                        {
+                            "name": "cunifymax_plans_title",
+                            "title": "Title",
+                            "input": "text",
+                            "default": "Plan"
+                        }, {
+                            "name": "cunifymax_plans_description",
+                            "title": "Description",
+                            "input": "textarea",  
+                            "default": "Listing of Plan added to this site."  
+                        }
+                    ]    
+        }
+    ]
+}
+
+

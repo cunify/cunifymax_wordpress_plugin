@@ -1,0 +1,76 @@
+{
+    "title": "Videos",
+    "alias": "videos",
+    "plural": "Videos",
+    "singular": "Video",
+    "description": "Listing Videos added by members.",
+    "position": "1",
+    "has_view": "1",
+    "fields": [
+        {
+            "nullable": "0",
+            "name": "title",
+            "title": "Title",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "0",
+            "name": "category_id",
+            "title": "Category",
+            "input": "category",
+            "mysql_type": "int",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "0",
+            "name": "link",
+            "title": "Link",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "description",
+            "input": "editor",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        }
+    ],
+    "groups": [
+        {
+            "title": "Videos Detail",
+            "alias": "videos_detail",
+            "show_title": 1,
+            "fields": [
+                "title",
+                "category_id",
+                "link",
+                "description"
+            ]
+        }
+    ],
+    "zones": {
+        "left": {
+            "groups": ["videos_detail"]
+        }
+    }
+}

@@ -1,0 +1,148 @@
+{% import _self as design_flow %}
+
+{% if design.post_type == 'designer_themes' %}
+
+    <div class="cx-design-wrapper">
+
+        <header id="cx-header-wrapper" class="cx-wrapper-section" data-hide-manage="true" data-zone="header">
+
+            {{ design_flow.render_section('header', design.zones.header, positions) }}
+
+        </header>
+
+        <section id="cx-top-wrapper" class="cx-wrapper-section" data-hide-manage="true" data-zone="top">
+
+            {{ design_flow.render_section('top', design.zones.top, positions) }}
+
+        </section>
+
+        <section id="cx-content-wrapper" class="cx-content-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-{{ design.main_size|default('8') }}">
+                        <div class="cx-position" data-position-name="content-top" data-hide-manage="true">
+                            {{ design_flow.render_position('content-top', attribute(positions, 'content-top')) }}
+                        </div>
+                        <div class="cx-static-content text-center"> CMS Main Content Area. </div>
+                        <div class="cx-position" data-position-name="content-bottom" data-hide-manage="true">
+                            {{ design_flow.render_position('content-bottom', attribute(positions, 'content-bottom')) }}
+                        </div>
+                    </div>
+                    <div class="col-{{ design.side_size|default('4') }}">
+                        <div class="cx-static-content text-center"> CMS Sidebar Area.</div>
+                        <div class="cx-position" data-position-name="sidebar-bottom" data-hide-manage="true">
+                            {{ design_flow.render_position('sidebar-bottom', attribute(positions, 'sidebar-bottom')) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>     
+
+        <section id="cx-bottom-wrapper" class="cx-wrapper-section" data-hide-manage="true" data-hide-manage="true" data-zone="bottom">
+
+            {{ design_flow.render_section('bottom', design.zones.bottom, positions) }}
+
+        </section>     
+
+
+        <footer id="cx-footer-wrapper" class="cx-wrapper-section" data-hide-manage="true" data-zone="footer">
+
+            {{ design_flow.render_section('footer', design.zones.footer, positions) }}
+
+        </footer>
+
+    </div>
+
+{% elseif design.twig %}
+
+    {{ design.twig }}
+
+{% else %}
+
+    {% if design.post_type == 'designer_themes' %}
+
+        <div id="cx-{{ design.slug }}-id">
+            <h1>Error Rendering Theme </h1>
+        </div>
+
+    {% elseif design.post_type == 'designer_blocks' %}
+        <div id="cx-{{ design.slug }}-id">
+            <h1>Awesome Designs</h1>
+        </div>
+    {% else %}
+        <div id="cx-{{ design.slug }}-id">
+            <h1>Awesome Designs</h1>
+        </div>
+    {% endif %}
+
+{% endif %}
+
+{% macro render_section(zone_name, sections, positions) %}
+
+    {% import _self as design_flow %}
+
+    {% if sections|length > 0 %}
+
+        {% for section_key,section in sections %}
+
+            <section id="{{ section_key }}" class="cx-section">
+                {% if section.has_container %}
+                    {{ '<div class="container">' }}
+                    {{ '<div class="row">' }}
+                {% endif %}
+                {% set grid_arr = section.grid|split('x') %}
+
+                {% for key,position_name in section.positions %}
+
+                    {% if attribute(grid_arr, key) %}
+                        {% set position_size = attribute(grid_arr, key) %}
+                    {% else %}
+                        {% set position_size = 12/section.positions|length %}
+                    {% endif %}
+
+                    <div class="cx-position {{ position_name }} col-{{ position_size|default('12') }}" data-position-name="{{ position_name }}" data-hide-manage="true">
+                        {{ design_flow.render_position(position_name, attribute(positions, position_name)) }}
+                    </div>
+
+                {% endfor %}
+
+                {% if section.has_container %}
+                    {{ '</div>' }}
+                    {{ '</div>' }}
+                {% endif %}
+
+            </section>
+
+        {% endfor %}
+
+    {% else %}
+        {{ design_flow.render_add_button('No Section added. [ ' ~ zone_name|capitalize  ~ ' ]', 'success') }}
+    {% endif %}
+
+
+{% endmacro %}
+
+{% macro render_position(position_name, position_htmls) %}
+
+    {% import _self as design_flow %}
+
+    {% if position_htmls|length > 0 %}
+        {% for position_html in position_htmls %}
+            {{ position_html.html }}
+        {% endfor %}
+    {% else %}
+        {{ design_flow.render_add_button('No Block added. [ ' ~ position_name|capitalize  ~ ' ]', 'dark') }}
+    {% endif %}
+
+
+
+{% endmacro %}
+
+{% macro render_add_button(slug, color) %}
+    <div class="text-center text-{{ color|default('success') }}">
+        <small>
+            {{ slug}}  
+        </small>
+    </div>
+{% endmacro %}

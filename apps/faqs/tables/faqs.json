@@ -1,0 +1,63 @@
+{
+    "title": "Faqs",
+    "alias": "faqs",
+    "plural": "Faqs",
+    "singular": "Faq",
+    "description": "Listing Frequently asked Questions(Faqs) ",
+    "position": "1",
+    "has_view": "1",
+    "fields": [
+        {
+            "nullable": "0",
+            "name": "title",
+            "title": "Title",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "0",
+            "name": "category_id",
+            "title": "Category",
+            "input": "category",
+            "mysql_type": "int",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "description",
+            "input": "editor",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        }
+    ],
+    "groups": [
+        {
+            "title": "Faqs Detail",
+            "alias": "faqs_detail",
+            "show_title": 1,
+            "fields": [
+                "title",
+                "category_id",
+                "description"
+            ]
+        }
+    ],
+    "zones": {
+        "left": {
+            "groups": ["faqs_detail"]
+        }
+    }
+}

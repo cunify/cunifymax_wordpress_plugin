@@ -1,0 +1,115 @@
+{# empty Twig template #}
+
+<html>
+
+    <head>
+        <title>{{ post.title }}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="{{ site.site_url }}/wp-content/plugins/cunifymax/assets/css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="{{ site.site_url }}/wp-content/plugins/cunifymax/assets/css/fontawesome-all.css" type="text/css">
+        <link rel="stylesheet" href="{{ site.site_url }}/wp-content/plugins/cunifymax/assets/css/jqueryui.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Acme|Alegreya|Alegreya+Sans|Anton|Archivo|Archivo+Black|Archivo+Narrow|Arimo|Arvo|Asap|Asap+Condensed|Bitter|Bowlby+One+SC|Bree+Serif|Cabin|Cairo|Catamaran|Crete+Round|Crimson+Text|Cuprum|Dancing+Script|Dosis|Droid+Sans|Droid+Serif|EB+Garamond|Exo|Exo+2|Faustina|Fira+Sans|Fjalla+One|Francois+One|Gloria+Hallelujah|Hind|Inconsolata|Indie+Flower|Josefin+Sans|Julee|Karla|Lato|Libre+Baskerville|Libre+Franklin|Lobster|Lora|Mada|Manuale|Maven+Pro|Merriweather|Merriweather+Sans|Montserrat|Montserrat+Subrayada|Mukta+Vaani|Muli|Noto+Sans|Noto+Serif|Nunito|Open+Sans|Open+Sans+Condensed:300|Oswald|Oxygen|PT+Sans|PT+Sans+Caption|PT+Sans+Narrow|PT+Serif|Pacifico|Passion+One|Pathway+Gothic+One|Play|Playfair+Display|Poppins|Questrial|Quicksand|Raleway|Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Ropa+Sans|Rubik|Saira|Saira+Condensed|Saira+Extra+Condensed|Saira+Semi+Condensed|Sedgwick+Ave|Sedgwick+Ave+Display|Shadows+Into+Light|Signika|Slabo+27px|Source+Code+Pro|Source+Sans+Pro|Spectral|Titillium+Web|Ubuntu|Ubuntu+Condensed|Varela+Round|Vollkorn|Work+Sans|Yanone+Kaffeesatz|Zilla+Slab|Zilla+Slab+Highlight" rel="stylesheet">
+       
+        <script type="text/javascript" src="{{ site.site_url }}/wp-content/plugins/cunifymax/assets/js/jquery.js"></script>
+    </head>
+
+    <body>    
+
+        <div class="container theme-selection">
+
+        <h3 class="text-center">Select Theme</h3>
+        <hr>
+
+            <div class="row">
+                {% for theme in htmls %}
+                    <div class="col-md-3">
+                        <div class="bg-light border">
+                            <h5 class="text-center">{{ theme.title }}</h5>
+
+                            <div class="img-wrapper text-center">
+                                <img class="rounded" src="{{ theme.upload_url ~ theme.image.file }}">
+                            </div>
+
+                            <div class="text-center p-1">
+                                <a class="btn btn-success btn-sm text-white" href="{{ site.url }}/cx-savetheme?id={{ theme.id }}"> 
+                                    <i class="fa fa-check"></i>
+                                    Select 
+                                </a>
+                                <a class="btn btn-primary btn-sm text-white" href="{{ preview_url }}?id={{ theme.id }}" target="_blank"> 
+                                    <i class="fa fa-eye"></i>
+                                    Preview 
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <script type="text/javascript" src="{{ site.site_url }}/wp-content/plugins/cunifymax/assets/js/bootstrap.bundle.js"></script>
+        <script type="text/javascript" src="{{ site.site_url }}/wp-content/plugins/cunifymax/assets/js/cunifymax.js"></script>
+      
+        <script type="text/javascript" src="{{ site.site_url }}/wp-content/plugins/cunifymax/assets/js/jqueryui.js"></script>
+
+        <style>
+
+            body{
+                background:url('{{ site.url }}/wp-content/plugins/cunifymax/assets/img/bg-image.jpg');
+                background-position: center;
+                background-attachment: fixed;
+                background-size:cover;
+            }
+
+            body::before {
+                content: "";
+                background: rgba(65, 69, 206, 0.7);
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+
+            body > *{
+                 z-index: 5;
+            }
+
+            .theme-selection{
+                margin-top:30px;
+            }
+
+            .theme-selection h3, .theme-selection hr{
+                z-index: 5;
+                position: relative;
+                color: #EFEFEF;
+            }
+
+            .theme-selection hr{
+                background:#EFEFEF;
+            }
+
+            .theme-selection h5{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                z-index: 5;
+            }
+
+            .img-wrapper{
+                height:300px;
+                overflow:hidden;
+                border:1px solid #EEE;
+                margin:5px;
+            }
+
+            .img-wrapper img{
+                width:95%;
+                margin:5px;
+                padding:2px;
+            }
+        </style>
+
+    </body>
+</html>

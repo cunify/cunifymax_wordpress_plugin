@@ -1,0 +1,116 @@
+{
+    "title": "Events",
+    "alias": "events",
+    "plural": "Events",
+    "singular": "Event",
+    "description": "Listing Events",
+    "position": "1",
+    "has_view": "1",
+    "fields": [
+        {
+            "nullable": "0",
+            "name": "title",
+            "title": "Title",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "0",
+            "name": "category_id",
+            "title": "Category",
+            "input": "category",
+            "mysql_type": "int",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "description",
+            "input": "editor",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "start_date",
+            "input": "datetime",
+            "mysql_type": "datetime",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "end_date",
+            "input": "datetime",
+            "mysql_type": "datetime",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "images",
+            "input": "gallery",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        }
+    ],
+    "groups": [
+        {
+            "title": "Events Detail",
+            "alias": "events_detail",
+            "show_title": 1,
+            "fields": [
+                "title",
+                "category_id",
+                "description"
+            ]
+        },
+        {
+            "title": "Images Upload",
+            "alias": "images_upload",
+            "show_title": 1,
+            "fields": [
+                "images"
+            ]
+        },
+        {
+            "title": "Dates Range",
+            "alias": "dates_range",
+            "show_title": 1,
+            "fields": [
+                "start_date",
+                "end_date"
+            ]
+        }
+    ],
+    "zones": {
+        "left": {
+            "groups": ["events_detail","images_upload"]
+        },
+        "right": {
+            "groups": ["dates_range"]
+        }
+    }
+}

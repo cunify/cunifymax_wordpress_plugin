@@ -1,0 +1,77 @@
+{
+    "title": "About Us",
+    "alias": "aboutus",
+    "plural": "About Us",
+    "singular": "About Us",
+    "description": "Listing About Us.",
+    "position": "3",
+    "has_view": "1",
+    "fields": [
+        {
+            "nullable": "0",
+            "name": "title",
+            "title": "Title",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "description",
+            "title": "Description",
+            "input": "editor",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "icon",
+            "title": "Icon",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "image",
+            "title": "Image",
+            "input": "upload",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        }
+    ],
+    "groups": [
+        {
+            "title": "About Us Detail",
+            "alias": "aboutus_detail",
+            "show_title": 1,
+            "fields": [
+                "title",
+                "icon",
+                "image",
+                "description"
+            ]
+        }
+    ],
+    "zones": {
+        "left": {
+            "groups": ["aboutus_detail"]
+        }
+    }
+}

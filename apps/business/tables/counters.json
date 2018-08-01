@@ -1,0 +1,64 @@
+{
+    "title": "Counter",
+    "alias": "counter",
+    "plural": "Counters",
+    "singular": "Counter",
+    "description": "Listing Counter.",
+    "position": "5",
+    "has_view": "1",
+    "fields": [
+        {
+            "nullable": "0",
+            "name": "title",
+            "title": "Title",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "icon",
+            "title": "Icon",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "counter",
+            "title": "Counter",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        }
+    ],
+    "groups": [
+        {
+            "title": "Counter Detail",
+            "alias": "counter_detail",
+            "show_title": 1,
+            "fields": [
+                "title",
+                "icon",
+                "counter"
+            ]
+        }
+    ],
+    "zones": {
+        "left": {
+            "groups": ["counter_detail"]
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "title": "Packages",
+    "alias": "packages",
+    "plural": "Packages",
+    "singular": "Package",
+    "description": "Listing Packages.",
+    "position": "1",
+    "has_view": "1",
+    "fields": [
+        {
+            "nullable": "0",
+            "name": "title",
+            "title": "Title",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "description",
+            "input": "editor",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        }
+    ],
+    "groups": [
+        {
+            "title": "Packages Detail",
+            "alias": "packages_detail",
+            "show_title": 1,
+            "fields": [
+                "title",
+                "description"
+            ]
+        }
+    ],
+    "zones": {
+        "left": {
+            "groups": ["packages_detail"]
+        }
+    }
+}

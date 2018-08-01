@@ -1,0 +1,14 @@
+[{
+        "name": "isotope",
+        "files": ["isotope.js"]
+    }, {
+        "name": "chartjs",
+        "files": ["Chart.js"]
+    }, {
+        "name": "owl-carousel",
+        "files": ["owl.carousel.css", "owl.carousel.js"]
+          }, {
+        "name": "hs-bg-video",
+        "files": ["hs-bg-video.css", "hs-bg-video.min.js",  "player.min.js"]
+    }
+]

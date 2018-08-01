@@ -1,0 +1,69 @@
+{
+    "title": "ThemePages",
+    "alias": "themepages",
+    "plural": "ThemePages",
+    "singular": "ThemePages",
+    "description": "Listing ThemePages.",
+    "position": "4",
+    "has_view": "1",
+    "fields": [
+        {
+            "nullable": "0",
+            "name": "title",
+            "title": "Title",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "description",
+            "title": "Description",
+            "input": "editor",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "pageslug",
+            "title": "Page  Slug",
+            "input": "text",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+ 
+      
+        }
+    ],
+
+    "groups": [
+        {
+            "title": "Theme Page Detail",
+            "alias": "themepage_detail",
+            "show_title": 1,
+            "fields": [
+                "title",
+                "pageslug",
+                "description"
+            ]
+     
+        }
+    ],
+
+    "zones": {
+        "left": {
+            "groups": ["themepage_detail"]
+        }
+    }
+}

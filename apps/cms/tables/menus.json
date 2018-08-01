@@ -1,0 +1,79 @@
+{
+    "title": "Menus",
+    "alias": "menus",
+    "plural": "Menus",
+    "singular": "Menu",
+    "description": "Listing Menus",
+    "position": "1",
+    "has_view": "1",
+    "fields": [
+        {
+            "nullable": "0",
+            "name": "title",
+            "title": "Title",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "description",
+            "title": "Description",
+            "input": "editor",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "url",
+            "title": "Url",
+            "input": "text",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "active",
+            "title": "Active",
+            "input": "text",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        }
+
+
+
+    ],
+    "groups": [
+        {
+            "title": "Menus Detail",
+            "alias": "menus_detail",
+            "show_title": 1,
+            "fields": [
+                "title",
+                "url",
+                "description"
+            ]
+        }
+    ],
+    "zones": {
+        "left": {
+            "groups": ["menus_detail"]
+        }
+    }
+}

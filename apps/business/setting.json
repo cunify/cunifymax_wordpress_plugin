@@ -1,0 +1,187 @@
+{
+    "sections": [
+        {
+            "title": "Why Us",
+            "name": "why_us_section",
+            "description": "Provide information on 'Why Us'",
+            "fields":
+                    [
+                        {
+                            "name": "cunifymax_whyus_title",
+                            "title": "Title",
+                            "input": "text",
+                            "default": "Why Us"
+                        }, {
+                            "name": "cunifymax_whyus_description",
+                            "title": "Description",
+                            "input": "textarea",  
+                            "default": "Listing of Why Us added to this site."  
+                        }
+                    ]    
+        }, {
+            "title": "Features",
+            "name": "features_section",
+            "description": "Provide information on 'Features'",
+            "fields":
+                    [
+                        {
+                            "name": "cunifymax_features_title",
+                            "title": "Title",
+                            "input": "text",
+                            "default": "Features"
+                        }, {
+                            "name": "cunifymax_features_description",
+                            "title": "Description",
+                            "input": "textarea",  
+                            "default": "Listing of Features added to this site."  
+                        }
+                    ]    
+        }, {
+            "title": "Counters",
+            "name": "counters_section",
+            "description": "Provide information on 'Counters'",
+            "fields":
+                    [
+                        {
+                            "name": "cunifymax_counters_title",
+                            "title": "Title",
+                            "input": "text",
+                            "default": "Counters"
+                        }, {
+                            "name": "cunifymax_counters_description",
+                            "title": "Description",
+                            "input": "textarea",  
+                            "default": "Listing of Counters added to this site."   
+                        }
+                    ]    
+        }, {
+            "title": "Departments",
+            "name": "departments_section",
+            "description": "Provide information on 'Departments'",
+            "fields":
+                    [
+                        {
+                            "name": "cunifymax_departments_title",
+                            "title": "Title",
+                            "input": "text",
+                            "default": "Departments"
+                        }, {
+                            "name": "cunifymax_departments_description",
+                            "title": "Description",
+                            "input": "textarea",  
+                            "default": "Listing of Departments added to this site."   
+                        }
+                    ]    
+        }, {
+            "title": "Partners",
+            "name": "partners_section",
+            "description": "Provide information on 'Partners'",
+            "fields":
+                    [
+                        {
+                            "name": "cunifymax_partners_title",
+                            "title": "Title",
+                            "input": "text",
+                            "default": "Partners"
+                        }, {
+                            "name": "cunifymax_partners_description",
+                            "title": "Description",
+                            "input": "textarea",  
+                            "default": "Listing of Partners added to this site."  
+                        }
+                    ]    
+        }, {
+            "title": "Portfolio",
+            "name": "portfolio_section",
+            "description": "Provide information on 'Portfolio'",
+            "fields":
+                    [
+                        {
+                            "name": "cunifymax_portfolio_title",
+                            "title": "Title",
+                            "input": "text",
+                            "default": "Portfolio"
+                        }, {
+                            "name": "cunifymax_portfolio_description",
+                            "title": "Description",
+                            "input": "textarea",  
+                            "default": "Listing of Portfolio added to this site."  
+                        }
+                    ]    
+        }, {
+            "title": "Profiles",
+            "name": "profiles_section",
+            "description": "Provide information on 'Profiles'",
+            "fields":
+                    [
+                        {
+                            "name": "cunifymax_profiles_title",
+                            "title": "Title",
+                            "input": "text",
+                            "default": "Profiles"
+                        }, {
+                            "name": "cunifymax_profiles_description",
+                            "title": "Description",
+                            "input": "textarea",  
+                            "default": "Listing of Profiles added to this site."   
+                        }
+                    ]    
+        }, {
+            "title": "Services",
+            "name": "services_section",
+            "description": "Provide information on 'Services'",
+            "fields":
+                    [
+                        {
+                            "name": "cunifymax_services_title",
+                            "title": "Title",
+                            "input": "text",
+                            "default": "Services"
+                        }, {
+                            "name": "cunifymax_services_description",
+                            "title": "Description",
+                            "input": "textarea",  
+                            "default": "Listing of Services added to this site."  
+                        }
+                    ]    
+        }, {
+            "title": "Skills",
+            "name": "skills_section",
+            "description": "Provide information on 'Skills'",
+            "fields":
+                    [
+                        {
+                            "name": "cunifymax_skills_title",
+                            "title": "Title",
+                            "input": "text",
+                            "default": "Skills"
+                        }, {
+                            "name": "cunifymax_skills_description",
+                            "title": "Description",
+                            "input": "textarea",  
+                            "default": "Listing of Skills added to this site."  
+                        }
+                    ]    
+        }, {
+            "title": "Teams",
+            "name": "teams_section",
+            "description": "Provide information on 'Teams'",
+            "fields":
+                    [
+                        {
+                            "name": "cunifymax_teams_title",
+                            "title": "Title",
+                            "input": "text",
+                            "default": "Teams"
+                        }, {
+                            "name": "cunifymax_teams_description",
+                            "title": "Description",
+                            "input": "textarea",  
+                            "default": "Listing of Teams added to this site."   
+                        }
+                    ]    
+        }
+    ]
+}
+
+

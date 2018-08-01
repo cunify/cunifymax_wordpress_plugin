@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>{{ design.title }}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        
+        <input class="design-post-id" type="hidden" value="{{ id }}">
+        <input class="design-save-url" type="hidden" value="{{ site.site_url }}/cx-savedesign">
+        <input class="design-reload-url" type="hidden" value="{{ site.site_url }}/cx-design">
+        <input class="design-loader-url" type="hidden" value="{{ site.site_url }}/cx-loaddesign">
+        <input class="design-savepage-url" type="hidden" value="{{ site.site_url }}/cx-savepage">
+        <input class="design-saveblock-url" type="hidden" value="{{ site.site_url }}/cx-saveblock">
+        <input class="design-saveupload-url" type="hidden" value="{{ site.site_url }}/cx-saveupload">
+        <input class="design-deleteblock-url" type="hidden" value="{{ site.site_url }}/cx-deleteblock">
+        <input class="design-deletepage-url" type="hidden" value="{{ site.site_url }}/cx-deletepage">
+        
+        {{ designer_wrapper }}
+        {{ include('css-style-generator.twig') }}
+        {{ include('css-javascript-generator.twig') }}
+
+        <script>
+            var cx_active_page = {{ design.active_page|default('0') }};
+        </script>
+        <script>
+            var cx_pages = {{ design.pages_json }};
+        </script>
+        <script>
+            var cx_apps = {{ design.apps }};
+        </script>
+        
+
+        <script>
+            {% if design.post_type == 'designer_themes' %}
+                var cx_element_str = 'header, footer, section.cx-wrapper-section, div.cx-position, div.cx-block';
+            {% else %}
+                var cx_element_str = 'body, section, div, img, audio, video, h1, h2, h3, h4, h5, h6, hr, p';
+            {% endif %}
+        </script>
+
+        {% for framework in frameworks %}
+            {% for file in framework.files %}
+
+                {% set type_is = 'js' %}
+                {% set asset_file = site.site_url ~ '/wp-content/plugins/cunifyadx/assets/frameworks/' ~ framework.name ~ '/' ~ file %}
+
+                {% if '.js' in file %}
+                    <script type="text/javascript" src="{{ asset_file }}"></script>
+                {% else %}
+                    <link rel="stylesheet" href="{{ asset_file }}" type="text/css">
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+
+    </body>
+</html>

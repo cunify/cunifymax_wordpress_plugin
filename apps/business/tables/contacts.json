@@ -1,0 +1,122 @@
+{
+    "title": "Contact",
+    "alias": "contact",
+    "plural": "Contacts",
+    "singular": "Contact",
+    "description": "Listing Contact.",
+    "position": "10",
+    "has_view": "1",
+    "fields": [
+        {
+            "nullable": "0",
+            "name": "name",
+            "title": "Name",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "description",
+            "title": "About Us",
+            "input": "editor",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "physical_location",
+            "title": "Physical Location",
+            "input": "textarea",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "address",
+            "title": "Address",
+            "input": "textarea",
+            "mysql_type": "text",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "email",
+            "title": "Email",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "phone",
+            "title": "Phone",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        }
+    ],
+
+    "groups": [
+        {
+            "title": "Contact Detail",
+            "alias": "contact_detail",
+            "show_title": 1,
+            "fields": [
+                "title",
+                "description"
+            ]
+        },
+        {
+            "title": "Location",
+            "alias": "location",
+            "show_title": 1,
+            "fields": [
+                "physical_location"
+            ]
+        },
+        {
+            "title": "Contact",
+            "alias": "contact",
+            "show_title": 1,
+            "fields": [
+                "address",
+                "email",
+                "phone"
+            ]
+        }
+    ],
+
+    "zones": {
+        "left": {
+            "groups": ["contact_detail"]
+        },
+        "right": {
+            "groups": ["contact", "location"]
+        }
+    }
+}

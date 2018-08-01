@@ -1,0 +1,63 @@
+{
+    "title": "Skill",
+    "alias": "skill",
+    "plural": "Skills",
+    "singular": "Skill",
+    "description": "Listing Skill.",
+    "position": "4",
+    "has_view": "1",
+    "fields": [
+        {
+            "nullable": "0",
+            "name": "title",
+            "title": "Title",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "percent",
+            "title": "Percent",
+            "input": "text",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        },
+        {
+            "nullable": "1",
+            "name": "color",
+            "title": "Color",
+            "input": "color",
+            "mysql_type": "varchar",
+            "id_name": "",
+            "class_name": "",
+            "default": "",
+            "readonly": "0",
+            "format": ""
+        }
+    ],
+    "groups": [
+        {
+            "title": "Skill Detail",
+            "alias": "skill_detail",
+            "show_title": 1,
+            "fields": [
+                "title",
+                "percent"
+            ]
+        }
+    ],
+    "zones": {
+        "left": {
+            "groups": ["skill_detail"]
+        }
+    }
+}
